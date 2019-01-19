@@ -10,12 +10,23 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            int x1 = 1;
+            int y1 = 3;
+            char sym1 = '*';
+            Draw(x1, y1, sym1);
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            int x2 = 4;
+            int y2 = 5;
+            char sym2 = '#';
+            Draw(x2, y2, sym2);
+
+            Console.ReadKey();
+        }
+
+        static void Draw(int x, int y, char sym)
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
         }
     }
 }
